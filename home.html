@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"></meta>
+  <title>AODB -> Create a Flight</title>
+
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+<link href="http://pablogarciafernandez.com/css/reset.css" media="screen" type="text/css" rel="stylesheet">
+<link href="css/dashboard.css"  media="screen" type="text/css" rel="stylesheet">
+
+</head>
+
+<body> 
+<nav class="navigation">
+
+        <select class="home-no-desk"> 
+            <option class="home-no-desk" value="#" selected="selected">Home</option> 
+            <option class="about-no-desk" value="#">About</option> 
+            <option class="work-no-desk" value="#">Work</option> 
+            <option class="lab-no-desk" value="#">Lab</option> 
+            <option class="contact-no-desk" value="#">Contact</option>   
+        </select>
+
+        <ul class="menu"><li><a href="http://127.0.0.1:8180/aodb.html"><svg class="home" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path id="3d-view-icon" d="M436.631,207.445v163.681L279.232,462V298.319L436.631,207.445z M256,258.08l180.201-104.04L256,50L75.799,154.041L256,258.08z M232.768,298.319L75.369,207.445v163.681L232.768,462V298.319z"/></svg><span>Home</span></a></li><li><a class="active" href="http://127.0.0.1:8180/aodb.html"><svg class="about" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path id="arrow-57-icon" d="M329.492,310.579v56.357L462,234.653l-132.508-132.28v56.357c0,0-232.756,47.367-279.492,250.896C149.503,303.088,329.492,310.579,329.492,310.579z"/></svg><span>Departures</span></a></li><li><a href="http://127.0.0.1:8180/departures.html"><svg class="work" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path id="arrow-54-icon" d="M329.492,201.421v-56.357L462,277.347l-132.508,132.28V353.27c0,0-232.756-47.367-279.492-250.896C149.503,208.912,329.492,201.421,329.492,201.421z"/></svg><span>Arrivals</span></a></li><li><a href="http://127.0.0.1:8080/createflight.html"><svg class="lab" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512"xml:space="preserve"><path id="plus-5-icon" d="M363.68,288.439h-76.24v76.238h-58.877v-76.238h-76.24v-58.877h76.24v-76.24h58.877v76.24h76.24V288.439zM462,256c0,113.771-92.229,206-206,206S50,369.771,50,256S142.229,50,256,50S462,142.229,462,256z M422,256c0-91.755-74.258-166-166-166c-91.755,0-166,74.259-166,166c0,91.755,74.258,166,166,166C347.755,422,422,347.741,422,256z"/></svg><span>New Flight</span></a></li><li><a href="http://127.0.0.1/billing.html"><svg class="contact" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path id="banknote-multi-6-icon" d="M462,321.067c-117.715,67.551-212.855-24.414-334.75,102.666L50,252.845l24.078-25.08l65.348,144.094l-0.032,0.137c127.809-95.908,192.184-20.162,310.864-78.215C455.315,304.864,459.955,316.587,462,321.067zM250.495,160.257c-26.486,4.42-39.199,28.523-28.354,53.852c11.434,26.729,44.273,43.822,71.287,37.08c23.956-5.967,34.974-28.979,24.653-53.092C307.25,172.778,276.987,155.837,250.495,160.257z M284.979,228.915l2.514,5.877l-8.796,1.469l-2.255-5.26c-4.374,0.361-10.576-0.172-15.615-1.646l-1.237-10.182c4.981,0.885,13.018,2.051,17.701,0.117c3.995-1.645,3.49-5.6-2.585-6.867c-5.171-1.148-21.04-0.596-26.182-12.607c-2.125-4.979-1.152-12.469,7.679-16.113l-2.551-5.967l8.797-1.469l2.346,5.479c3.877-0.385,8.013-0.357,13.028,0.23c0.344,1.928,1.868,10.299,1.868,10.299c-3.496-0.484-9.259-1.391-13.957-0.328c-0.084,0.02-0.167,0.041-0.248,0.061c-5.526,1.377-4.146,5.49,0.613,6.723c9.75,2.186,22.963,3.221,27.5,13.822C297.118,220.751,292.433,226.53,284.979,228.915z M386.941,88.267c-122.767,79.906-206.177-9.207-305.997,87.531c23.221,50.883,57.375,125.711,71.517,156.701c102.483-78.92,194.65,1.58,308.578-79.445L386.941,88.267z M198.611,277.245c-12.612-11.031-37.205-25.018-53.675-23.07c-6.604-14.471-12.797-27.664-19.088-41.451c10.967-11.098,19.475-33.416,20.162-50.943c57.829-21.842,124.503,0.307,196.043-22.193c12.858,11.836,32.912,20.488,50.027,21.406l21.267,49.072c-11.181,13.039-18.783,29.947-21.231,47.029C331.671,275.679,263.191,255.144,198.611,277.245z"/></svg><span>Billing</span></a></li></ul>
+    </nav>
+    <section class="flight-data"> 
+    <h1>aeriaA International Airport - AODB</h1>
+    <img title="airport" src="images/airport.jpg" alt="" width="920" height="460"/>
+    <section>
+  </body>      

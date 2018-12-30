@@ -1,0 +1,511 @@
+
+/* CSS Document
+
+Name: Pablo García Fernández;
+Website: http://pablogarciafernandez.com;
+Twitter: @PableraShow;
+
+*/
+
+body { background-color: #F1F1F1; }
+
+ul, li {
+padding:0;
+margin:0;
+}
+
+/* Tipografia */
+.container th h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 3.4em;
+	letter-spacing: 0.03em;
+}
+
+.container th h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.8em;
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 3.4em;
+	letter-spacing: 0.03em;
+}
+
+.container td {
+	font-weight: lighter;
+	font-size: 1em;
+	color: #464646;
+	letter-spacing: 0.051em;
+}
+/* FIN Tipografia */
+
+/* Estructura */
+.container {
+	text-align: left;
+	overflow: hidden;
+
+	-webkit-box-shadow: 0 8px 6px -4px #717171;
+	-moz-box-shadow: 0 8px 6px -4px #717171;
+	box-shadow: 0 8px 6px -4px #717171;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.container td, .container th {
+	font-family: 'Open Sans', sans-serif;
+	padding: 0 1em 0 1em;
+}
+
+/* clase especifica para los titulos de la PRIMERA COLUMNA */ 
+.container tr th:nth-child(1) {
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	border-top-left-radius: 8px;
+}
+/* clase especifica para los titulos de la NOVENA COLUMNA */ 
+.container tr th:nth-child(10) {
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	border-top-right-radius: 8px;
+}
+
+/* clase especifica para la PRIMERA COLUMNA */ 
+.container td:nth-child(1) {
+	background-color: #D6463D;
+} 
+
+.container tr:hover td:nth-child(1) {
+	color: #052340;
+}
+
+
+/* clase especifica para la SEGUNDA COLUMNA */
+.container td:nth-child(2), .container th:nth-child(2) {
+	width: 30%;
+}
+
+/* clase especifica para la TERCERA COLUMNA */
+.container td:nth-child(3), .container th:nth-child(3) {
+	width: 30%;
+}
+/*
+.container td:nth-child(4), .container th:nth-child(4) {
+padding-right: 5%;
+}
+*/
+.container th {
+	background-color: #184E82;
+	border-bottom: 0.2em solid #0F2F4F;	
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+	background-color: #E8ECED;
+}
+/** Background para las IMAPRES de la PRIMERA COLUMNA **/
+.container tr:nth-child(odd) td:nth-child(1) { background-color: #E84C42; }
+
+.container thead tr:first-child { background: none; }
+
+.container tr:hover {
+	background-color: #168CFF;
+}
+
+.container tr:hover td:first-child {
+	color: #68221E;
+}
+
+.container tr:hover td {
+	color: #fff;
+}
+
+.container td:first-child {
+	color: #fff;
+	font-size: 1.06em; 
+	letter-spacing: 0.1em;
+}
+
+.container td {
+	color: #052340;
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+	
+}
+
+/* estilos para las celdas editables */
+[contenteditable="true"]:hover { 
+	outline: 3px dashed #E84C42; 
+}
+
+
+
+/* -------  ¿Quieres ponerle un color de fondo a las filas PARES de la tabla? si quieres que sean las impares cambia el (EVEN) por (ODD) 
+
+.container tr:nth-child(even){
+background-color: grey;
+} */
+
+
+
+/* ------- ¿Quieres ponerle un color de texto diferente a cada titular?
+
+.container th:nth-child(1) {
+color: #09507D;
+}
+
+.container th:nth-child(2) {
+color: #0D71B0;
+}
+
+.container th:nth-child(3) {
+color: #108BD9;
+}
+
+.container th:nth-child(4) {
+color: #12A3FF;
+} */
+
+
+/* ------- ¿Quieres que DESAPAREZCA una COLUMNA al cambiar el tamaño de la pantalla? puedes elegir la columna cambiando el número de (2), en este caso desaparece la columna 2.
+Esto aparecerá cuando la pantalla sea como máximo 800px.
+
+@media (max-width: 800px){ 
+.container td:nth-child(2), .container th:nth-child(2) {
+display: none;
+}
+} */
+
+
+/* Navigation select
+----------------- */
+.navigation ul{
+	display: none;
+}
+
+.navigation select{
+	display: inline-block;
+	width: 100%;
+	height: 34px;
+	font-size: 1em;
+	padding: 4px 2%;
+	border: 0 none none;
+	color: #333;
+	border: 1px solid;
+	border-top: ;
+	border-left: ;
+	border-bottom: ;
+	border-right: ;
+}
+
+.navigation .home-no-desk{ background-color:#00FF96; padding: 4px 2%; }
+.navigation .about-no-desk{ background-color: #FF6524; padding: 4px 2%; }
+.navigation .work-no-desk{ background-color: #FFA300; padding: 4px 2%; }
+.navigation .lab-no-desk{ background-color: #FFCD00; padding: 4px 2%; }
+.navigation .contact-no-desk{ background-color: #F2F600; padding: 4px 2%; }
+
+.navigation ul{
+	display: none;
+}
+
+/* END Navigation select
+----------------- */
+
+svg{
+	opacity:1;
+	fill-opacity:1;
+	fill-rule:nonzero;
+}
+.home{ fill:#00FF96; }
+.about{ fill: #FF6524; }
+.work{ fill: #FFA300; }
+.lab{ fill: #FFCD00; }
+.contact{ fill: #F2F600; }
+
+/* hover #333 de los svg del menu */
+.navigation a:hover .home, .navigation a:hover .about, .navigation a:hover .work, .navigation a:hover .lab, .navigation a:hover .contact { fill:#333; }
+
+section article{
+	padding-bottom: 2em;
+}
+
+
+
+
+/* -- LAS .CLASSES ESPECIFICAS ES BUENO QUE ESTÉN LO MAS BAJO POSIBLE DEL DOCUMENTO,
+PORQUE ASI PUEDEN "PISAR" PROPIEDADES HEREDADAS QUE TENGAN POR ENCIMA DE ELLAS -- */
+
+/* ----------- .flight-data styles ----------- */
+.flight-data{
+	padding: 0 7em 0 13em;
+
+}
+
+.flight-data h1{
+	font-family: 'Open Sans', sans-serif;
+	font-size:2em; 
+	font-weight: 300;
+	color:#000;
+	line-height: 3.375em;
+	text-transform: none;
+}
+
+.flight-data h1 span{
+	font-style: italic;
+	font-weight: 700;
+	text-transform: none;
+	color: red;
+}
+
+.flight-data h2{
+	font-weight: 300;
+	text-transform: none;
+}
+
+.flight-data h2 a{
+	font-weight: 700;
+}
+
+
+/* ----------- End .flight-data styles ----------- */
+
+
+
+
+
+/* FORMULARIO */
+
+form {
+	width: 100%;
+	display: block;
+}
+
+form > ul > li > input {
+	width: 50%;
+	max-width: 450px;
+	height: 1em;
+	margin: 1em auto;
+	padding: 1em 2em;
+	font-size: 1em; 
+	text-transform: uppercase;
+	border: 0.3em solid #D7D7D7;
+	border-radius: 8px; 
+	color: #717171;
+	background-color: #F1F1F1;
+}
+
+input {
+	width: 50%;
+	max-width: 450px;
+	height: 1em;
+	margin: 1em auto;
+	padding: 1em 2em;
+	font-size: 1em; 
+	text-transform: uppercase;
+	border: 0.3em solid #D7D7D7;
+	border-radius: 8px; 
+	color: #717171;
+	background-color: #F1F1F1;
+}
+
+input::-webkit-input-placeholder { color: #717171; }
+input:-moz-placeholder { /* Firefox 18- */ color: #717171; }
+input::-moz-placeholder {  /* Firefox 19+ */ color: #717171; }
+input:-ms-input-placeholder { color: #717171; }
+input:hover::-webkit-input-placeholder { color: #168CFF; }
+input:hover:-moz-placeholder { /* Firefox 18- */ color: #168CFF; }
+input:hover::-moz-placeholder {  /* Firefox 19+ */ color: #168CFF; }
+input:hover:-ms-input-placeholder { color: #168CFF; }
+input:focus::-webkit-input-placeholder { color: #184E82; }
+input:focus:-moz-placeholder { /* Firefox 18- */ color: #184E82; }
+input:focus::-moz-placeholder {  /* Firefox 19+ */ color: #184E82; }
+input:focus:-ms-input-placeholder { color: #184E82; }
+
+
+input:focus {/*  border-color: #184E82;*/
+outline: none;
+color: #052340;
+}
+input:hover {
+	border-color: #168CFF;
+	color: #168CFF;
+}
+
+input:valid:focus {
+	color: #71CE1C;
+	border-color: #71CE1C;
+}
+
+input.button {
+	
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	background-color: #184E82;
+	border-color: #0F2F4F;
+	color: #fff;
+	cursor: pointer;
+	height: 3em;
+	width: 100%;
+	padding: 0.4em 0.8em;
+
+
+}
+input.button:active{
+	padding-top: 0.5em;
+	border-width: 0.2em;
+	 text-shadow: 0 -0.15em #0F2F4F;
+}
+
+/* END FORMULARIO */
+
+
+
+/* Structure DESKTOP
+------------------------------------- */
+@media only screen and (min-width: 1024px){ /*and (min-height: 600px)
+	OPTIMAL POSITION */
+
+	body{
+		padding: 0;
+	}
+
+	header, article, section, footer{
+		margin: 0 auto;
+		width: auto;
+		display: block;
+	}
+
+
+/* Navigation
+----------------- */
+
+/* Navigation select
+----------------- */
+.navigation select{
+	display: none;
+}
+
+/* END Navigation select
+----------------- */
+
+.navigation{
+	transition-delay: 0s;
+	transition-duration: 0.4s;
+	transition-property: all;
+	transition-timing-function: line;
+}
+
+.navigation a:hover
+{
+	transition-delay: 0s;
+	transition-duration: 0.2s;
+	transition-property: all;
+	transition-timing-function: line;
+}
+
+.navigation{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 3.9em;
+	display: block;
+	background-color: #333;
+}
+.navigation:hover{
+	position: fixed;
+	width: 10em;
+}
+
+.navigation ul{
+	display: block;
+}
+
+.navigation li{
+	display: block;
+}
+
+.navigation a{
+	display: block;
+	padding: 0.8em 0.7em 0.8em 1em;
+	margin: 0;
+	line-height: 2em;
+	font-size: 400;
+	color: #F1F1F1;
+	text-transform: uppercase;
+}
+.navigation a:hover{
+	display: inline-block;
+	padding: 0 0 0 1em;
+	margin: 0;
+	line-height: 2em;
+	font-weight: 400;
+	width: 6em;
+	background-color: #666;
+	color: #333;
+
+}
+.navigation:hover a{
+	display: inline-block;
+	width: 9em;
+	padding: 0.8em 0 0.8em 1em;
+}
+.navigation span{
+	font-family: 'Open Sans', sans-serif;
+	display: inline-block;
+	text-indent: -200px;
+	padding-left: 0.3em;
+
+}
+.navigation:hover span{
+	display: inline-block;
+	text-indent: 0;
+
+}
+.active{
+	background-color: #F1F1F1;
+}
+.active span{
+	color: #333;
+}
+.active:hover span{
+	color: #F1F1F1;
+}
+.active svg{
+	fill:#000;
+}
+
+.navigation svg{
+	width: 30px;
+	height: 30px;
+	vertical-align: top;
+}
+
+/* Posicion de los menus en la barra de navegación */
+.menu{
+	top: 0;
+	left: 0;
+	position: fixed;
+	height: auto;
+	width: auto;
+}
+
+/* END Posicion de los menus en la barra de navegación */
+
+
+/* ----------------- 
+End Navigation */
+}
+
+
+

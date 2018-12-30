@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"></meta>
+ <title>PIDS -> Passengers Information Display System</title>
+
+<script type="text/javascript"src="js/jquery-1.10.2.min.js"></script>
+<link href="css/dashboard.css"  media="screen" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript">
+        function requestDeparturesFlights(){
+			$.getJSON('http://127.0.0.1:8181/departures', {format: "json"}, function(data) { 
+			var numPages = data.length / 25;
+			var tr;	
+        	for (var i = 0; i < data.length; i++) {
+            	tr = $('<tr/>');
+            	tr.append("<td>" + data[i].Flight + "</td>");
+            	tr.append("<td>" + data[i].Company + "</td>");
+            	tr.append("<td>" + data[i].Destination + "</td>");
+            	tr.append("<td>" + data[i].STD + "</td>");
+            	tr.append("<td>" + data[i].ETD + "</td>");
+            	tr.append("<td>" + data[i].Terminal + "</td>");
+            	tr.append("<td>" + data[i].Counter + "</td>");
+            	tr.append("<td>" + data[i].Gate + "</td>");
+            $('table').append(tr);
+			}
+		});
+	}		
+</script>
+
+</head>
+
+<body> 
+
+<script type="text/javascript">
+ 	requestDeparturesFlights();
+</script>
+
+<section class="flight-data">
+<h1>Departures Flights</h1>
+
+<table class="container">
+	<thead>
+		<tr>
+			<th><h2>Flight</h2></th>
+			<th><h2>Company</h2></th>
+			<th><h2>Destination</h2></th>
+			<th><h2>STD</h2></th>
+			<th><h2>ETD</h2></th>
+			<th><h2>Terminal</h2></th>
+			<th><h2>Counter</h2></th>
+			<th><h2>Gate</h2></th>
+		</tr>
+	</thead>
+</table>
+</section>
+
+</body>​
+</html>

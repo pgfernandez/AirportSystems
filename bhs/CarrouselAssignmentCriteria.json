@@ -1,0 +1,191 @@
+{
+     "criteria":"Stands Proximity",
+     "Carrousel1":[
+            {"C1":"A01"},
+            {"C1":"A02"},
+            {"C1":"A03"},
+            {"C1":"A04"}
+     ],
+     "Carrousel2":[
+            {"C2":"A05"},
+            {"C2":"A06"},
+            {"C2":"A07"}
+     ],
+     "Carrousel3":[
+            {"C3":"A08"},
+            {"C3":"A09"}
+     ],
+     "Carrousel4":[
+            {"C4":"A10"},
+            {"C4":"A11"}
+     ],
+     "Carrousel5":[
+            {"C5":"B01"},
+            {"C5":"B02"}
+    ],
+     "Carrousel6":[
+            {"C6":"B03"},
+            {"C6":"B04"},
+            {"C6":"B05"},
+            {"C6":"B06"}
+    ],
+    "Carrousel7":[
+            {"C7":"B07"},
+            {"C7":"B08"},
+            {"C7":"B09"}
+    ],
+    "Carrousel8":[
+            {"C8":"B10"},
+            {"C8":"B11"}
+    ],
+    "Carrousel9":[
+            {"C9":"B12"},
+            {"C9":"B13"},
+            {"C9":"B14"}
+    ]
+}
+
+{
+     "criteria":"Stands Proximity",
+     "Assignments":[
+            {"Carrousel":"C1","Gate":"A01"},
+            {"Carrousel":"C1","Gate":"A02"},
+            {"Carrousel":"C1","Gate":"A03"},
+            {"Carrousel":"C1","Gate":"A04"},
+            {"Carrousel":"C2","Gate":"A05"},
+            {"Carrousel":"C2","Gate":"A06"},
+            {"Carrousel":"C2","Gate":"A07"},
+            {"Carrousel":"C3","Gate":"A08"},
+            {"Carrousel":"C3","Gate":"A09"},
+            {"Carrousel":"C4","Gate":"A10"},
+            {"Carrousel":"C4","Gate":"A11"},
+            {"Carrousel":"C5","Gate":"B01"},
+            {"Carrousel":"C5","Gate":"B02"},
+            {"Carrousel":"C6","Gate":"B03"},
+            {"Carrousel":"C6","Gate":"B04"},
+            {"Carrousel":"C6","Gate":"B05"},
+            {"Carrousel":"C6","Gate":"B06"},
+            {"Carrousel":"C7","Gate":"B07"},
+            {"Carrousel":"C7","Gate":"B08"},
+            {"Carrousel":"C7","Gate":"B09"},
+            {"Carrousel":"C8","Gate":"B10"},
+            {"Carrousel":"C8","Gate":"B11"},
+            {"Carrousel":"C9","Gate":"B12"},
+            {"Carrousel":"C9","Gate":"B13"},
+            {"Carrousel":"C9","Gate":"B14"}
+    ]
+}
+
+{
+     
+     [
+            {Carrousel:"C1",Gate:"A01"},
+            {Carrousel:"C1",Gate:"A02"},
+            {Carrousel:"C1",Gate:"A03"},
+            {Carrousel:"C1",Gate:"A04"},
+            {Carrousel:"C2",Gate:"A05"},
+            {Carrousel:"C2",Gate:"A06"},
+            {Carrousel:"C2",Gate:"A07"},
+            {Carrousel:"C3",Gate:"A08"},
+            {Carrousel:"C3",Gate:"A09"},
+            {Carrousel:"C4",Gate:"A10"},
+            {Carrousel:"C4",Gate:"A11"},
+            {Carrousel:"C5",Gate:"B01"},
+            {Carrousel:"C5",Gate:"B02"},
+            {Carrousel:"C6",Gate:"B03"},
+            {Carrousel:"C6",Gate:"B04"},
+            {Carrousel:"C6",Gate:"B05"},
+            {Carrousel:"C6",Gate:"B06"},
+            {Carrousel:"C7",Gate:"B07"},
+            {Carrousel:"C7",Gate:"B08"},
+            {Carrousel:"C7",Gate:"B09"},
+            {Carrousel:"C8",Gate:"B10"},
+            {Carrousel:"C8",Gate:"B11"},
+            {Carrousel:"C9",Gate:"B12"},
+            {Carrousel:"C9",Gate:"B13"},
+            {Carrousel:"C9",Gate:"B14"}
+    ]
+}
+
+{
+     "criteria":"Stands Proximity",
+     "Assignments":[
+            {"C1":"A01"},
+            {"C1":"A02"},
+            {"C1":"A03"},
+            {"C1":"A04"},
+            {"C2":"A05"},
+            {"C2":"A06"},
+            {"C2":"A07"},
+            {"C3":"A08"},
+            {"C3":"A09"},
+            {"C4":"A10"},
+            {"C4":"A11"},
+            {"C5":"B01"},
+            {"C5":"B02"},
+            {"C6":"B03"},
+            {"C6":"B04"},
+            {"C6":"B05"},
+            {"C6":"B06"},
+            {"C7":"B07"},
+            {"C7":"B08"},
+            {"C7":"B09"},
+            {"C8":"B10"},
+            {"C8":"B11"},
+            {"C9":"B12"},
+            {"C9":"B13"},
+            {"C9":"B14"}
+    ]
+}
+
+
+{
+     "criteria":"Ground Handling",
+     "Carrousel1":{
+            "C1":"A01",
+            "C1":"A02",
+            "C1":"A03",
+            "C1":"A04"
+     },
+     "Carrousel2":{
+            "C2":"A05",
+            "C2":"A06",
+            "C2":"A07"
+     },
+     "Carrousel3":{
+            "C3":"A08",
+            "C3":"A09"
+     },
+     "Carrousel4":{
+            "C4":"A10",
+            "C4":"A11"
+     }
+}
+
+
+
+
+
+{
+     "criteria":"teacher's experience",
+     "Assignments":[
+            {"Classroom":"C1","Teacher":"A01"},
+            {"Classroom":"C1","Teacher":"A02"},
+            {"Classroom":"C1","Teacher":"A03"},
+            {"Classroom":"C9","Teacher":"B14"}
+    ]
+}
+
+function assignClass (teacher) {
+
+assignClassTeacher.find({}, {_id:0, Assignments:{$elemMatch: { "Teacher": + JSON.stringify(teacher)}}}, function(err , results){
+        if(results){
+        console.log('Teacher given in query ' + teacher);
+        console.log('Response success '+ JSON.stringify(results));
+        console.log('Response type ' +results.typeof);
+      }
+        
+    })
+}
+
+db.assignClassTeacher.find({}, {_id:0, Assignments:{$elemMatch: { "Teacher":"B01"}}});
